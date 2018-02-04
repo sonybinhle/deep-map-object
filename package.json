@@ -1,0 +1,12 @@
+{
+  "name": "deep-map-object",
+  "version": "0.0.1",
+  "description": "The utility for deep mapping object's keys and values",
+  "main": "index.js",
+  "repository": "https://github.com/sonybinhle/deep-map-object.git",
+  "author": "Binh Le <sonybinhle@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.4"
+  }
+}
