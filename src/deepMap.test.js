@@ -1,4 +1,4 @@
-const deepMap = require('./index');
+const deepMap = require('./deepMap');
 
 describe('deepMap', function () {
     it('when options is not a function or object -> then throw exception', function () {
@@ -211,7 +211,7 @@ describe('deepMap', function () {
             ]
         };
         var options = {
-            mapValue: function(value, resolve) {
+            mapValue: function(value) {
                 return value + 1;
             },
             mapArray: function(array, resolve) {
@@ -241,5 +241,31 @@ describe('deepMap', function () {
                 2
             ]
         });
+    });
+
+    it('when using object with prototypes -> don\'t map prototype part', function () {
+        // Given
+        var prototype = {
+            p: 1
+        };
+        var object = {
+            a: 8
+        };
+
+        object.__proto__ = prototype;
+
+        var options = function(value) {
+            return value + 1;
+        };
+
+        // When
+        var result = deepMap(options)(object);
+
+        // Then
+        expect(result).toEqual({
+            a: 9
+        });
+
+        expect(result.__proto__).toEqual(Object.prototype);
     });
 });

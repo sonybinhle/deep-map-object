@@ -30,7 +30,6 @@ function defaultMapObject(object, resolve) {
 
 function deepMap(options) {
     var mapFn, mapValue, mapArray, mapObject;
-    var resolveFn, resolveArray, resolveObject;
 
     if (!isObject(options) && !isFunction(options)) throw new Error('Options must be a function or a object');
 
@@ -48,10 +47,6 @@ function deepMap(options) {
             return mapFn(value, resolve);
         }
 
-        if (!isObject(value)) {
-            return mapValue(value, resolve);
-        }
-
         if (Array.isArray(value)) {
             return mapArray(value, resolve);
         }
@@ -60,7 +55,7 @@ function deepMap(options) {
             return mapObject(value, resolve);
         }
 
-        return value;
+        return mapValue(value, resolve);
     }
 
     return resolve;

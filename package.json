@@ -1,12 +1,26 @@
 {
   "name": "deep-map-object",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The utility for deep mapping object's keys and values",
-  "main": "index.js",
+  "main": "src/deepMap.js",
   "repository": "https://github.com/sonybinhle/deep-map-object.git",
   "author": "Binh Le <sonybinhle@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "test:cov": "rimraf ./coverage && npm run test -- --coverage"
+  },
   "devDependencies": {
     "jest": "^22.1.4"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 90,
+        "branches": 90,
+        "functions": 90,
+        "lines": 90
+      }
+    }
   }
 }
