@@ -8,9 +8,12 @@
   "license": "MIT",
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "test:cov": "rimraf ./coverage && npm run test -- --coverage"
+    "test:cov": "rimraf ./coverage && npm run test -- --coverage",
+    "prepush": "npm test:cov",
+    "prepublishOnly": "npm test:cov"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
     "jest": "^22.1.4"
   },
   "jest": {
