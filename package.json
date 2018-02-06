@@ -9,8 +9,8 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "test:cov": "rimraf ./coverage && npm run test -- --coverage",
-    "prepush": "npm test:cov",
-    "prepublishOnly": "npm test:cov"
+    "prepush": "npm run test:cov",
+    "prepublishOnly": "npm run test:cov"
   },
   "devDependencies": {
     "husky": "^0.14.3",
