@@ -2,8 +2,8 @@
 
 <div align="center">
   <!-- devDependency Status -->
-  <a href="https://david-dm.org/sonybinhle/deep-map-object#info=devDependencies">
-    <img src="https://david-dm.org/sonybinhle/deep-map-object/dev-status.svg" alt="devDependency Status" />
+  <a href="https://david-dm.org/sonybinhle/deep-map-object?type=dev" title="devDependencies status">
+    <img src="https://david-dm.org/sonybinhle/deep-map-object/dev-status.svg"/>
   </a>
 </div>
 
