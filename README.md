@@ -1,3 +1,12 @@
+<div align="center"><strong>Status</strong></div>
+
+<div align="center">
+  <!-- devDependency Status -->
+  <a href="https://david-dm.org/sonybinhle/deep-map-object#info=devDependencies">
+    <img src="https://david-dm.org/sonybinhle/deep-map-object/dev-status.svg" alt="devDependency Status" />
+  </a>
+</div>
+
 # deep-map-object v0.0.1
 
 The utility for deep mapping object keys and values
