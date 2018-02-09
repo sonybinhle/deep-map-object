@@ -1,10 +1,13 @@
 <div align="center"><strong>Status</strong></div>
 
 <div align="center">
-  <!-- devDependency Status -->
   <a href="https://david-dm.org/sonybinhle/deep-map-object?type=dev" title="devDependencies status">
     <img src="https://david-dm.org/sonybinhle/deep-map-object/dev-status.svg"/>
   </a>
+  
+  <a href="https://travis-ci.org/sonybinhle/deep-map-object.svg?branch=master">
+      <img src="https://travis-ci.org/sonybinhle/deep-map-object.svg?branch=master" alt="Build Status" />
+    </a>
 </div>
 
 # deep-map-object v0.0.1
@@ -26,7 +29,7 @@ npm i deep-map-object
 
 <strong>ES6</strong>
 
-```javascript
+```jsx harmony
 import deepMap from 'deep-map-object';
 
 const options = function(value) {
