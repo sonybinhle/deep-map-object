@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - 7
+  - 6
+  - 5
+
+script:
+  - npm run test:cov
+
+notifications:
+  email:
+    on_failure: change
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
