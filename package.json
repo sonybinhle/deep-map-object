@@ -10,9 +10,11 @@
     "test": "NODE_ENV=test jest",
     "test:cov": "rimraf ./coverage && npm run test -- --coverage",
     "prepush": "npm run test:cov",
-    "prepublishOnly": "npm run test:cov"
+    "prepublishOnly": "npm run test:cov",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "husky": "^0.14.3",
     "jest": "^22.1.4"
   },
