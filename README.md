@@ -8,6 +8,11 @@
   <a href="https://travis-ci.org/sonybinhle/deep-map-object.svg?branch=master">
       <img src="https://travis-ci.org/sonybinhle/deep-map-object.svg?branch=master" alt="Build Status" />
     </a>
+    
+  <a href='https://coveralls.io/github/sonybinhle/deep-map-object?branch=master'>
+  <img src='https://coveralls.io/repos/github/sonybinhle/deep-map-object/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
+
 </div>
 
 # deep-map-object v0.0.1
