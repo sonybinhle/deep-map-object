@@ -15,7 +15,7 @@
 
 </div>
 
-# deep-map-object v0.0.1
+# deep-map-object v0.0.3
 
 The utility for deep mapping object keys and values
 
