@@ -61,7 +61,6 @@ function deepMap(options) {
     return resolve;
 }
 
-deepMap.mapValue = defaultMapValue;
 deepMap.mapArray = defaultMapArray;
 deepMap.mapObject = defaultMapObject;
 

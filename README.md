@@ -110,6 +110,7 @@ console.log(result);
 `mapObject: function(value: object, resolve: function(value: any)) => result: any`
 
 `// If mapFn is used, mapValue, mapArray, mapObject options will be disabled`
+
 `mapFn: function(value:any, resolve: function(value: any)) => result: any`
 
 + Based on the type of variable we want to convert, it may be object, array or primitive value.
@@ -117,8 +118,10 @@ console.log(result);
 
 ## Static functions
 
-`deepMap.mapValue: function(value: primitive) => result:any`
-
 `deepMap.mapArray: function(value: array, resolve: function) => result:any`
 
++ default mapArray util which run resolve to every array's items
+
 `deepMap.mapObject: function(value: object, resolve: function) => result:any`
+
++ default mapObject util which run resolve to every object's key
