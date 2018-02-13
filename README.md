@@ -97,21 +97,47 @@ console.log(result);
 ## Api:
 
 ### deepMap(options)(obj)
-`deepMap: function(options: function|object) => (resolve: function(value: any) => result:any)`
+<strong>deepMap: function(options: function|object) => (resolve: function(value: any) => result:any)</strong>
 
 + deepMap(options) will create a resolve function which can transform(resolve) object into another format.
 + the resolve function is the util function that help you to loop deeper into input value.
 + options may be a function that take a primitive value and transform it to target value or may take a object with below format:
+```jsx harmony
+import deepMap from 'deep-map-object';
 
-`mapValue: function(value: primitive, resolve: function(value: any)) => result: any`
+const data = { x: 1 };
 
-`mapArray: function(value: array, resolve: function(value: any)) => result: any`
+const result = deepMap(value => value + 1)(data);
 
-`mapObject: function(value: object, resolve: function(value: any)) => result: any`
+console.log(result); // {x : 2}
+```
 
+<strong>mapValue: function(value: primitive, resolve: function(value: any)) => result: any</strong>
+```jsx harmony
+import deepMap from 'deep-map-object';
+
+const data = { x: 1 };
+
+const result = deepMap({ mapValue: value => value + 1 })(data);
+
+console.log(result); // {x : 2}
+```
+
+<strong>mapArray: function(value: array, resolve: function(value: any)) => result: any</strong>
+```jsx harmony
+import deepMap from 'deep-map-object';
+
+const data = { a: [1, 2, 3] };
+
+const result = deepMap({ mapArray: values => values.map(value => value + 1) })(data);
+
+console.log(result); // { a: [2, 3, 4] };
+```
+
+<strong>mapObject: function(value: object, resolve: function(value: any)) => result: any</strong>
+
+<strong>mapFn: function(value:any, resolve: function(value: any)) => result: any</strong>
 `// If mapFn is used, mapValue, mapArray, mapObject options will be disabled`
-
-`mapFn: function(value:any, resolve: function(value: any)) => result: any`
 
 + Based on the type of variable we want to convert, it may be object, array or primitive value.
 + deepMap internally support you to loop deeply in nested object, so you only need to care about transform business
