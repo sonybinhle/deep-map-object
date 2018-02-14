@@ -1,6 +1,6 @@
 {
   "name": "deep-map-object",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The utility for deep mapping object's keys and values",
   "main": "src/deepMap.js",
   "repository": "https://github.com/sonybinhle/deep-map-object.git",

@@ -112,7 +112,7 @@ const result = deepMap(value => value + 1)(data);
 console.log(result); // {x : 2}
 ```
 
-<strong>mapValue: function(value: primitive, resolve: function(value: any)) => result: any</strong>
+<strong>mapValue: function(value: primitive, resolve: function(value: any))</strong>
 ```jsx harmony
 import deepMap from 'deep-map-object';
 
@@ -123,7 +123,7 @@ const result = deepMap({ mapValue: value => value + 1 })(data);
 console.log(result); // {x : 2}
 ```
 
-<strong>mapArray: function(value: array, resolve: function(value: any)) => result: any</strong>
+<strong>mapArray: function(value: array, resolve: function(value: any))</strong>
 ```jsx harmony
 import deepMap from 'deep-map-object';
 
@@ -134,7 +134,20 @@ const result = deepMap({ mapArray: values => values.map(value => value + 1) })(d
 console.log(result); // { a: [2, 3, 4] };
 ```
 
-<strong>mapObject: function(value: object, resolve: function(value: any)) => result: any</strong>
+<strong>mapObject: function(value: object, resolve: function(value: any))</strong>
+```jsx harmony
+import deepMap from 'deep-map-object';
+
+const data = { a: { num: 0 }, b: { num: 1 } };
+
+const result = deepMap({ 
+   mapObject: (obj, resolve) => obj.num > 0 
+       ? {...obj, num: obj.num + 1 } 
+       : deepMap.mapObject(obj, resolve) 
+})(data);
+
+console.log(result); // { a: { num: 0 }, b: { num: 2 } };
+```
 
 <strong>mapFn: function(value:any, resolve: function(value: any)) => result: any</strong>
 `// If mapFn is used, mapValue, mapArray, mapObject options will be disabled`
