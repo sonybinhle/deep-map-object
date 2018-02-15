@@ -149,18 +149,34 @@ const result = deepMap({
 console.log(result); // { a: { num: 0 }, b: { num: 2 } };
 ```
 
-<strong>mapFn: function(value:any, resolve: function(value: any)) => result: any</strong>
+<strong>mapFn: function(value:any, resolve: function(value: any))</strong>
 `// If mapFn is used, mapValue, mapArray, mapObject options will be disabled`
+```jsx harmony
+import deepMap from 'deep-map-object';
+
+const data = { a: { num: 0 }, c: { d: [1, 2] } };
+
+const result = deepMap({ 
+   mapFn: (val, resolve) => {
+     if (Array.isArray(val)) return val.map(resolve);
+     if (val instanceof Object) return deepMap.mapObject(val, resolve);
+     
+     return val + 1;
+   } 
+})(data);
+
+console.log(result); // { a: { num: 1 }, c: { d: [2, 3] } };
+```
 
 + Based on the type of variable we want to convert, it may be object, array or primitive value.
 + deepMap internally support you to loop deeply in nested object, so you only need to care about transform business
 
 ## Static functions
 
-`deepMap.mapArray: function(value: array, resolve: function) => result:any`
+`deepMap.mapArray: function(value: array, resolve: function(value: any))`
 
 + default mapArray util which run resolve to every array's items
 
-`deepMap.mapObject: function(value: object, resolve: function) => result:any`
+`deepMap.mapObject: function(value: object, resolve: function(value: any))`
 
 + default mapObject util which run resolve to every object's key
