@@ -173,10 +173,10 @@ console.log(result); // { a: { num: 1 }, c: { d: [2, 3] } };
 
 ## Static functions
 
-`deepMap.mapArray: function(value: array, resolve: function(value: any))`
+<strong>deepMap.mapArray: function(value: array, resolve: function(value: any))</strong>
 
 + default mapArray util which run resolve to every array's items
 
-`deepMap.mapObject: function(value: object, resolve: function(value: any))`
+<strong>deepMap.mapObject: function(value: object, resolve: function(value: any))</strong>
 
 + default mapObject util which run resolve to every object's key
