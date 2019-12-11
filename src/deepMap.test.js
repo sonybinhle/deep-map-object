@@ -19,7 +19,7 @@ describe('deepMap', function () {
     var object = {
       a: 8,
       b: 'string',
-      c: [ 'a', 0, 'b' ],
+      c: ['a', 0, 'b'],
       d: { e: { f: 'f', g: 10 } }
     };
     var options = function (value) {
@@ -37,7 +37,7 @@ describe('deepMap', function () {
     expect(result).toEqual({
       a: 'The original value is 8',
       b: 'string',
-      c: [ 'a', 'The original value is 0', 'b' ],
+      c: ['a', 'The original value is 0', 'b'],
       d: { e: { f: 'f', g: 'The original value is 10' } }
     });
   });

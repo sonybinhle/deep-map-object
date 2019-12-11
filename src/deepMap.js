@@ -20,7 +20,7 @@ function defaultMapObject (object, resolve) {
   var mappedObject = {};
 
   for (var key in object) {
-    if (object.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(object, key)) {
       mappedObject[key] = resolve(object[key]);
     }
   }

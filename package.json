@@ -1,6 +1,6 @@
 {
   "name": "deep-map-object",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The utility for deep mapping object's keys and values",
   "main": "src/deepMap.js",
   "repository": "https://github.com/sonybinhle/deep-map-object.git",
@@ -15,16 +15,16 @@
     "lint": "eslint --fix src"
   },
   "devDependencies": {
-    "coveralls": "^3.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jest": "^22.6.4",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "husky": "^2.3.0",
-    "jest": "^24.8.0"
+    "coveralls": "^3.0.9",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0"
   },
   "jest": {
     "coverageThreshold": {
